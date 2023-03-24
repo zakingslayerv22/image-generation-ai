@@ -15,11 +15,22 @@ app.use(express.json({ limit: '50mb' }));
 app.use('/api/v1/post', postRoutes);
 app.use('/api/v1/dalle', dalleRoutes);
 
+// This would give a JSON OUTPUT
+
+// app.get('/', async (req, res) => {
+//   res.status(200).json({
+//     message: 'Hello from DALL.E!',
+//   });
+// });
+
+// This would give a HTML OUPUT on the Browser.
+// Both are fulfilling the same purpose of 
+// showing that localhost:8080 is working
+
 app.get('/', async (req, res) => {
-  res.status(200).json({
-    message: 'Hello from DALL.E!',
-  });
+  res.send('Hello from DALL-E');
 });
+
 
 const startServer = async () => {
   try {
