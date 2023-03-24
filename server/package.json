@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,3 +20,5 @@
     "openai": "^3.2.1"
   }
 }
+
+
